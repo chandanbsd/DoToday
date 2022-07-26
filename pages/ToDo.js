@@ -47,7 +47,7 @@ export default function ToDo() {
           <View style={styles.ticketContainer}>
             <Text style={styles.item}>{item[1]}</Text>
             <Button
-              title="Incomplete"
+              title="Complete"
               onPress={() => {
                 setTickets(
                   tickets.map((val) => {
@@ -77,7 +77,7 @@ export default function ToDo() {
           <View style={styles.ticketContainer}>
             <Text style={styles.item}>{item[1]}</Text>
             <Button
-              title="Complete"
+              title="Incomplete"
               onPress={() => {
                 setTickets(
                   [...tickets].map((val) => {
@@ -136,5 +136,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     fontSize: 20,
     textAlign: "center",
+  },
+  incompleteList: {
+    heading: 50,
   },
 });
